@@ -1,9 +1,9 @@
-/* Import high-energy comic display typography */
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
 
 html {
     scroll-behavior: smooth;
-    background-color: #121118; /* Midnight charcoal comic book paper background */
+    background-color: #121118; 
 }
 
 * {
@@ -14,7 +14,7 @@ html {
 
 body {
     font-family: 'Space Grotesk', sans-serif;
-    color: #ffffff; /* Crisp white text for high readability */
+    color: #ffffff; 
     line-height: 1.5;
     padding: 0 20px;
     display: flex;
@@ -23,7 +23,7 @@ body {
     min-height: 100vh;
 }
 
-/* Fixed Cartoon Floating Top Navbar */
+
 .navbar {
     position: fixed;
     top: 20px;
@@ -36,10 +36,10 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    background: #ffde4d; /* High-contrast pop-art yellow stays bright */
-    border: 3.5px solid #000000; /* Pure deep ink outline */
+    background: #ffde4d; 
+    border: 3.5px solid #000000; 
     border-radius: 16px;
-    box-shadow: 4px 4px 0px #000000; /* Hard flat deep comic block shadow */
+    box-shadow: 4px 4px 0px #000000; 
 }
 
 .nav-links {
@@ -50,7 +50,7 @@ body {
 .nav-item {
     font-size: 0.95rem;
     font-weight: 700;
-    color: #000000; /* Ink black text inside the yellow bar */
+    color: #000000; 
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -58,11 +58,11 @@ body {
 }
 
 .nav-item:hover {
-    color: #ff4e88; /* Bubblegum pink highlight */
-    transform: scale(1.1) rotate(-2deg); /* Playful cartoon tilt */
+    color: #ff4e88; 
+    transform: scale(1.1) rotate(-2deg); 
 }
 
-/* Master Layout Grid Canvas */
+
 .portfolio-canvas {
     max-width: 750px;
     width: 100%;
@@ -70,11 +70,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 70px;
-    height: auto;          /* Lets the page expand down naturally */
-    overflow: visible;     /* Prevents content from getting clipped */
+    height: auto;          
+    overflow: visible;    
 }
 
-/* Profile / Hero Frame Setup */
+
 .hero-section {
     width: 100%;
     display: flex;
@@ -94,8 +94,8 @@ body {
     height: 120px;
     object-fit: cover;
     border-radius: 24px;
-    border: 4px solid #000000; /* Heavy ink line */
-    box-shadow: 5px 5px 0px #000000; /* Solid block shadow */
+    border: 4px solid #000000; 
+    box-shadow: 5px 5px 0px #000000; 
     background-color: #ff4e88;
     margin-bottom: 10px;
     transition: transform 0.2s ease;
@@ -115,15 +115,15 @@ body {
 .role-badge {
     font-size: 1rem;
     font-weight: 700;
-    background: #a3e635; /* Electric pop-green sticker */
-    color: #000000; /* Punchy black text on sticker label */
+    background: #a3e635; 
+    color: #000000; 
     padding: 4px 12px;
     border: 2.5px solid #000000;
     border-radius: 8px;
     box-shadow: 2px 2px 0px #000000;
 }
 
-/* Main Bio Statement Pitch */
+
 .bio-statement {
     display: flex;
     flex-direction: column;
@@ -133,7 +133,7 @@ body {
 .sub-label {
     font-size: 0.8rem;
     font-weight: 800;
-    color: #ff4e88; /* Bubblegum pink subheadings */
+    color: #ff4e88; 
     letter-spacing: 1.5px;
 }
 
@@ -141,10 +141,10 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.4;
-    color: #e2e8f0; /* Soft off-white for reading long statements */
+    color: #e2e8f0; 
 }
 
-/* Section Headings with Marker Highlight Look */
+
 .section-title {
     font-size: 1.8rem;
     font-weight: 800;
@@ -152,22 +152,22 @@ body {
     margin-bottom: 25px;
     text-transform: uppercase;
     display: inline-block;
-    /* Dark-optimized highlighting strip */
+    
     background: linear-gradient(180deg, transparent 65%, #ff4e88 65%);
 }
 
-/* Comic-Panel Card Grid Blocks */
+
 .timeline-container {
     width: 100%;
 }
 
 .timeline-node {
-    background: #1e1b26; /* Deep purple-tinted panel card background */
+    background: #1e1b26; 
     border: 3.5px solid #000000;
     border-radius: 16px;
     padding: 24px;
     margin-bottom: 25px;
-    box-shadow: 5px 5px 0px #000000; /* Hard dark popup shadow */
+    box-shadow: 5px 5px 0px #000000; 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -178,7 +178,7 @@ body {
 }
 
 .node-dot {
-    display: none; /* Keep the panels clean and sharp */
+    display: none; 
 }
 
 .node-header {
@@ -209,7 +209,7 @@ body {
 
 .node-subtitle {
     font-size: 0.85rem;
-    color: #a3e635; /* Electric lime pops for key details */
+    color: #a3e635; 
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -217,11 +217,11 @@ body {
 .node-body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.95rem;
-    color: #cbd5e1; /* Clear grey text for body copy inside panels */
+    color: #cbd5e1; 
     font-weight: 500;
 }
 
-/* Technical Skill Stickers Matrix */
+
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -234,9 +234,9 @@ body {
 }
 
 .skill-pill {
-    background: #38bdf8; /* Vibrant sky blue cartoon label */
+    background: #38bdf8; 
     border: 2.5px solid #000000;
-    color: #000000; /* Contrast black font for labels */
+    color: #000000; 
     padding: 6px 14px;
     font-size: 0.9rem;
     font-weight: 700;
@@ -247,10 +247,10 @@ body {
 
 .skill-pill:hover {
     transform: scale(1.1) rotate(1.5deg);
-    background: #a3e635; /* Swaps to neon green on hover */
+    background: #a3e635; 
 }
 
-/* Contact Panels & Forms Setup */
+
 .connect-section {
     width: 100%;
 }
@@ -316,7 +316,7 @@ body {
     text-decoration: underline;
 }
 
-/* Form Input Element Styling */
+
 .input-group {
     display: flex;
     flex-direction: column;
@@ -347,10 +347,10 @@ body {
     border-color: #ff4e88;
 }
 
-/* Form Action Submit Button */
+
 .send-btn {
     width: 100%;
-    background: #a3e635; /* Pop neon green */
+    background: #a3e635; 
     color: #000000;
     border: 2.5px solid #000000;
     padding: 12px;
@@ -369,7 +369,7 @@ body {
     background: #ffde4d;
 }
 
-/* Page Footer Elements Line */
+
 .footer-block {
     width: 100%;
     margin-top: 20px;
@@ -409,7 +409,7 @@ body {
     color: #94a3b8;
 }
 
-/* Tablet Media Scale Adaptations */
+
 @media (max-width: 768px) {
     .connect-split {
         grid-template-columns: 1fr;
