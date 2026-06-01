@@ -1,0 +1,426 @@
+/* Import high-energy comic display typography */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    background-color: #121118; /* Midnight charcoal comic book paper background */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #ffffff; /* Crisp white text for high readability */
+    line-height: 1.5;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Fixed Cartoon Floating Top Navbar */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: #ffde4d; /* High-contrast pop-art yellow stays bright */
+    border: 3.5px solid #000000; /* Pure deep ink outline */
+    border-radius: 16px;
+    box-shadow: 4px 4px 0px #000000; /* Hard flat deep comic block shadow */
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #000000; /* Ink black text inside the yellow bar */
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: transform 0.1s ease;
+}
+
+.nav-item:hover {
+    color: #ff4e88; /* Bubblegum pink highlight */
+    transform: scale(1.1) rotate(-2deg); /* Playful cartoon tilt */
+}
+
+/* Master Layout Grid Canvas */
+.portfolio-canvas {
+    max-width: 750px;
+    width: 100%;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    height: auto;          /* Lets the page expand down naturally */
+    overflow: visible;     /* Prevents content from getting clipped */
+}
+
+/* Profile / Hero Frame Setup */
+.hero-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 4px solid #000000; /* Heavy ink line */
+    box-shadow: 5px 5px 0px #000000; /* Solid block shadow */
+    background-color: #ff4e88;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+}
+
+.profile-pic:hover {
+    transform: rotate(4deg) scale(1.05);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+.role-badge {
+    font-size: 1rem;
+    font-weight: 700;
+    background: #a3e635; /* Electric pop-green sticker */
+    color: #000000; /* Punchy black text on sticker label */
+    padding: 4px 12px;
+    border: 2.5px solid #000000;
+    border-radius: 8px;
+    box-shadow: 2px 2px 0px #000000;
+}
+
+/* Main Bio Statement Pitch */
+.bio-statement {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sub-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #ff4e88; /* Bubblegum pink subheadings */
+    letter-spacing: 1.5px;
+}
+
+.headline-pitch {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #e2e8f0; /* Soft off-white for reading long statements */
+}
+
+/* Section Headings with Marker Highlight Look */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    display: inline-block;
+    /* Dark-optimized highlighting strip */
+    background: linear-gradient(180deg, transparent 65%, #ff4e88 65%);
+}
+
+/* Comic-Panel Card Grid Blocks */
+.timeline-container {
+    width: 100%;
+}
+
+.timeline-node {
+    background: #1e1b26; /* Deep purple-tinted panel card background */
+    border: 3.5px solid #000000;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 25px;
+    box-shadow: 5px 5px 0px #000000; /* Hard dark popup shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-node:hover {
+    transform: translateY(-3px) translateX(-2px);
+    box-shadow: 7px 7px 0px #000000;
+    border-color: #000000;
+}
+
+.node-dot {
+    display: none; /* Keep the panels clean and sharp */
+}
+
+.node-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.node-header h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.node-date {
+    font-size: 0.85rem;
+    font-weight: 700;
+    background: #ff4e88;
+    color: #ffffff;
+    padding: 2px 10px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    box-shadow: 1.5px 1.5px 0px #000000;
+}
+
+.node-subtitle {
+    font-size: 0.85rem;
+    color: #a3e635; /* Electric lime pops for key details */
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.node-body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #cbd5e1; /* Clear grey text for body copy inside panels */
+    font-weight: 500;
+}
+
+/* Technical Skill Stickers Matrix */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: #1e1b26;
+    border: 3.5px solid #000000;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 0px #000000;
+}
+
+.skill-pill {
+    background: #38bdf8; /* Vibrant sky blue cartoon label */
+    border: 2.5px solid #000000;
+    color: #000000; /* Contrast black font for labels */
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0px #000000;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.skill-pill:hover {
+    transform: scale(1.1) rotate(1.5deg);
+    background: #a3e635; /* Swaps to neon green on hover */
+}
+
+/* Contact Panels & Forms Setup */
+.connect-section {
+    width: 100%;
+}
+
+.connect-split {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+}
+
+.contact-info-card, .contact-form {
+    background: #1e1b26;
+    border: 3.5px solid #000000;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 0px #000000;
+}
+
+.contact-info-card h3, .contact-form h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon-wrap {
+    width: 44px;
+    height: 44px;
+    background: #ffde4d;
+    border: 2.5px solid #000000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 0px #000000;
+}
+
+.info-row label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #94a3b8;
+}
+
+.info-row a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.info-row a:hover {
+    color: #ff4e88;
+    text-decoration: underline;
+}
+
+/* Form Input Element Styling */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.input-group input, .input-group textarea {
+    background: #121118;
+    border: 2.5px solid #000000;
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    outline: none;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    background: #1e1b26;
+    border-color: #ff4e88;
+}
+
+/* Form Action Submit Button */
+.send-btn {
+    width: 100%;
+    background: #a3e635; /* Pop neon green */
+    color: #000000;
+    border: 2.5px solid #000000;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #000000;
+    transition: all 0.1s ease;
+}
+
+.send-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 4px 4px 0px #000000;
+    background: #ffde4d;
+}
+
+/* Page Footer Elements Line */
+.footer-block {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.footer-line {
+    width: 100%;
+    height: 3.5px;
+    background: #000000;
+    margin-bottom: 25px;
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.footer-brand strong {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-right: 15px;
+}
+
+.footer-brand span a {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #94a3b8;
+}
+
+/* Tablet Media Scale Adaptations */
+@media (max-width: 768px) {
+    .connect-split {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    .footer-wrap {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+}
